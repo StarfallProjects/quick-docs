@@ -1,0 +1,12 @@
+<!-- Override the default copyright info in the footer. Retain attribution to the Material theme; add credit for hosting (it's nice to do this when using the free plan especially) -->
+<div class="md-copyright">
+    {% if config.copyright %}
+        <div class="md-copyright__highlight">
+        {{ config.copyright }}
+        </div>
+    {% endif %}
+    {% if not config.extra.generator == false %}
+    Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a> | Hosted by
+    <a href="https://pages.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Pages</a>
+    {% endif %}
+</div>

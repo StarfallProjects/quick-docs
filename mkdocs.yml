@@ -1,0 +1,51 @@
+site_name: Your site name
+site_description: Your site description
+site_author: Author Name
+theme:
+  name: material
+  # https://squidfunk.github.io/mkdocs-material/customization/?h=#setup-and-theme-structure
+  custom_dir: overrides
+  language: en
+  features:
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-sections
+    - navigation.sections
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-tabs
+    - navigation.tabs
+    - navigation.tabs.sticky
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#back-to-top-button
+    - navigation.top
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
+    - navigation.tracking
+# https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
+extra_css:
+  - css/extra.css
+# https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
+extra_javascript:
+  - javascript/extra.js
+
+plugins:
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/?h=search#built-in-search
+  - search
+markdown_extensions:
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists attr_list is required for several other features. Always enable.
+  - attr_list
+  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admoni
+  - admonition
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
+  - pymdownx.superfences
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
+  - meta
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
+  - pymdownx.inlinehilite
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
+  - pymdownx.snippets  
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tabbed
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - tables
+nav:
+  - Home: index.md
