@@ -1,21 +1,25 @@
 # Quick docs
 
-Quickly deploy a full-featured docs setup to Cloudflare Pages.
+A full-featured docs setup.
 
-This is an opinionated setup: I have chosen to enable and configure features I usually want, such as navigation tabs and admonitions.
+This is an opinionated setup: 
+
+- Commonly-used theme features, such as navigation tabs and admonitions, are enabled and configured.
+- The project setup assumes you use pip to install requirements, and deploy to Cloudflare Pages.
+- The linting uses the Microsoft writing style guide, write-good, and alex. See [Using Vale](#using-vale) for more details.
 
 ## Features
 
-- MkDocs with the Material theme
-- Vale GitHub Action
+- [MkDocs](https://www.mkdocs.org/) with the [Material](https://squidfunk.github.io/mkdocs-material/) theme.
+- [Vale](https://docs.errata.ai/) linting: [GitHub Action](https://github.com/errata-ai/vale-action) set to run on pull request, and an opinionated style setup.
 - Support for [Plausible](https://plausible.io/) analytics
 
-## Quickstart
+## Quick deploy to Cloudflare Pages
 
 1. Copy the contents of this repo to your own repo.
 2. Follow the instructions on [how to deploy MkDocs to Cloudflare Pages](https://starfallprojects.co.uk/projects/deploy-host-docs/deploy-mkdocs-material-cloudflare/). Note that this example repo uses the free version of Material. Once done, you have a live site!
 
-## Work on the site
+## Work on the site locally
 
 1. Clone your repo.
 2. Create a virtual environment:
@@ -38,7 +42,7 @@ This is an opinionated setup: I have chosen to enable and configure features I u
 
 ## Using Vale
 
-Vale provides linting, both locally and on pull request.
+Vale provides text linting, both locally and on pull request using a GitHub Action.
 
 The setup in this repo includes the following styles:
 
@@ -56,12 +60,8 @@ The setup in this repo includes the following styles:
 - [Install Vale CLI](https://docs.errata.ai/vale/install) and run it with `vale --glob='*.md' docs` (this lints all Markdown files in your `docs` directory)
 - Install Vale CLI or Vale Server, and use with one of the integrations, such as the VS Code extension. There is a list of integrations in the [docs](https://docs.errata.ai/).
 
-### To lint on pull request, enable the GitHub Action:
-
-
-
 ## Resources
 
 The `mkdocs.yml` includes links to documentation on each theme feature that I'm using. The Material theme is the foundation of this project, and its [documentation](https://squidfunk.github.io/mkdocs-material/) is extensive and very helpful. You can also learn more about [MkDocs](https://www.mkdocs.org/), the static site generator underpinning the theme.
 
-Vale is a complex linting tool. The [documentation](https://docs.errata.ai/) is a good starting point.
+Vale is a complex linting tool. The [documentation](https://docs.errata.ai/) is a good starting point. You may also want to learn a little about [GitHub Actions](https://docs.github.com/en/actions/quickstart).
