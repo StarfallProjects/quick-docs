@@ -36,8 +36,32 @@ This is an opinionated setup: I have chosen to enable and configure features I u
 
 ## Configure the site
 
+## Using Vale
+
+Vale provides linting, both locally and on pull request.
+
+The setup in this repo includes the following styles:
+
+- [Microsoft](https://github.com/errata-ai/Microsoft): a Vale-compatible implementation of the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/).
+- [write-good](https://github.com/errata-ai/write-good)
+- [alex](https://github.com/errata-ai/alex): a Vale-compatible implementation of the guidelines enforced by the alex, a linter designed to catch insensitive writing.
+
+### Configure your styles
+
+1. In `styles`, rename `your-company-styles` to your company name, and in `.vale.ini` change `your-company-styles` to the new directory name.
+2. In `styles/Vocab/default`, add any terms you want Vale to accept or reject to the appropriate `.txt` file. This is useful for allowing company-specific terminology (such as brand names) to pass the spell checker. Learn more about [Vale vocabularies](https://docs.errata.ai/vale/vocab).
+
+### To lint your local files, you can:
+
+- [Install Vale CLI](https://docs.errata.ai/vale/install) and run it with `vale --glob='*.md' docs` (this lints all Markdown files in your `docs` directory)
+- Install Vale CLI or Vale Server, and use with one of the integrations, such as the VS Code extension. There is a list of integrations in the [docs](https://docs.errata.ai/).
+
+### To lint on pull request, enable the GitHub Action:
+
 
 
 ## Resources
 
 The `mkdocs.yml` includes links to documentation on each theme feature that I'm using. The Material theme is the foundation of this project, and its [documentation](https://squidfunk.github.io/mkdocs-material/) is extensive and very helpful. You can also learn more about [MkDocs](https://www.mkdocs.org/), the static site generator underpinning the theme.
+
+Vale is a complex linting tool. The [documentation](https://docs.errata.ai/) is a good starting point.
